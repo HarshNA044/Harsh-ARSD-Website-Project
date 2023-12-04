@@ -1,0 +1,150 @@
+<html>
+<head>
+  <title>ARSD College Student Registration Form</title>
+
+  <style>
+    body {
+      background-color: #f4f4f4;
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 20px;
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+    }
+
+    h2 {
+      text-align: left;
+      color: #a52a2a;
+    }
+
+    label {
+      display: block;
+      margin: 10px;
+      color: #333;
+    }
+
+    div {
+      display: flex;
+    }
+    header {
+            background-color: #0047ab;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #001f4d; 
+            padding: 10px;
+            width: 100%;
+        }
+        nav a {
+            color: #fff; 
+            margin: 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #00274D; 
+            border: 1px solid #001F4D; 
+        }
+        nav li:hover > ul {
+            display: inherit;
+        }
+        nav ul ul li {
+            width: 100%;
+            float: none;
+        }
+       
+        footer {
+            background-color: #001F4D; 
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+  </style>
+</head>
+<body><header>
+  <img width='150' align='left' src='https://www.rojgarhub.com/wp-content/uploads/2022/04/ARSD-College-Recruitment.jpg'>
+  <h1>Atma Ram Sanatan Dharma College</h1>
+  <h2 style="color: white; text-align: center;">Dhaula Kuan, New Delhi-110021</h2><h3>University of Delhi</h3>
+</header>
+<nav>
+  <ul>
+      <li><a href="file:///C:/Users/dell/Downloads/main.html">Home</a></li>
+      <li>
+          <a href="file:///C:/Users/dell/Downloads/About%20Us.html">About Us</a>
+      </li>
+      <li>
+          <a href="#">Faculty</a>
+          <ul>
+              <li><a href="#">Computer</a><hr></li>
+              <li><a href="#">History</a></li>
+              
+          </ul>
+      </li>
+      <li><a href="file:///C:/Users/dell/Downloads/student%20registeration%20form.html">Student Registration</a></li>
+      <li><a href="file:///C:/Users/dell/Downloads/Contact%20Us.html">Contact Us</a></li>
+  </ul>
+</nav>
+  <br><center>
+<form>
+  <img width="100" align="left" src="https://seeklogo.com/images/A/arsd-college-logo-35C65FCD3D-seeklogo.com.png">
+  <h2>ARSD College Student Registration Form</h2><br>
+<hr>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+    <div>
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+    </div>
+    <label for="course">Course:</label>
+    <select id="course" name="course" required>
+      <option value="commerce">Commerce</option>
+      <option value="science">Science</option>
+      <option value="arts">Arts</option>
+    </select>
+    <div>
+      <label for="interests">Interests:</label>
+      <input type="checkbox" id="reading" name="interests" value="reading">
+      <label for="reading">Reading</label>
+      <input type="checkbox" id="sports" name="interests" value="sports">
+      <label for="sports">Sports</label>
+      <input type="checkbox" id="music" name="interests" value="music">
+      <label for="music">Music</label>
+    </div>
+  </b><br>
+  <button style="border-radius: 4px; background-color: #a52a2a; color: white;" type="submit">Submit</button>
+  <button style="border-radius: 4px; background-color: #a52a2a; color: white;" type="reset">Reset</button>
+  </form></center><br><br><br><br>
+  <footer>
+      <p>&copy; 2023 Atma Ram Sanatan Dharma College. All rights reserved.</p>
+      <b><p>Created By Harsh 23/35017</p></b><p>BSc. Phy. Sci. With Computer Science</p>
+  </footer></body>
+</body>
+</html>
