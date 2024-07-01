@@ -5,103 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atma Ram Sanatan Dharma College</title>
     <style>
-      body {
-    margin: 0;
-    padding: 0;
-}
-header {
-    background: #00008B;
-    color: black;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-}
-
-nav {
-    background-color: #001f4d;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-footer {
-    background: #00008B;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
-
-nav a {
-    color: #fff;
-    margin: 10px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    font-size: 50%;
-}
-
-nav li {
-    position: relative;
-}
-
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #00274D;
-    border: 1px solid #001F4D;
-}
-
-nav li:hover > ul {
-    display: inherit;
-}
-
-nav ul ul li {
-    width: 100%;
-    float: none;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: times;
+        }
+        header {
+            background: #001f4d;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .menu-icon div {
+            width:20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        nav {
+            display: none;
+            background-color: #001f4d;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 50px;
+            width: 100%;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #00274D;
+        }
+        nav a:hover {
+            background-color: #00274D;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .show-menu {
+            display: block;
+        }
+        footer {
+            background: #001f4d;
+            color: #fff;
+            text-align: center;
+            padding: 1%;
+            font-size: 80%;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
 <header>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <img width='250' align='top' src='ARSD College Logo.png'>
 </header>
 
-<nav>
+<nav id="navbar">
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li>
-            <a href="About Us.html">About Us</a>
-        </li>
-        <li>
-            <a href="#">Faculty</a>
-            <ul>
-                <li><a href="#">Computer</a><hr></li>
-                <li><a href="#">History</a></li>
-            </ul>
-        </li>
-        <li><a href="student registeration form.html">Student Registration</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="student registration form.html">Student Registration</a></li>
         <li><a href="Contact Us.html">Contact Us</a></li>
-    </ul>
+    
 </nav><br><br><br>
 <div style="padding: 2.5%;">
-<marquee style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 8px; border: 2px solid #4169e1;">Atma Ram Sanatan Dharma College is a prestigious institution committed to providing quality
-    education and fostering holistic development. Our college offers a diverse range of courses and activities to
-    nurture the intellectual and personal growth of our students.
-</marquee><br><br><br>
-<center><img width=100% src="https://static.theprint.in/wp-content/uploads/2023/06/Untitled-design-2023-06-08T174.png"></center>
+    <marquee style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 8px; border: 2px solid #4169e1;">Atma Ram Sanatan Dharma College is a prestigious institution committed to providing quality
+        education and fostering holistic development. Our college offers a diverse range of courses and activities to
+        nurture the intellectual and personal growth of our students.
+    </marquee><br><br><br>
+    <center><img width=100% src="https://static.theprint.in/wp-content/uploads/2023/06/Untitled-design-2023-06-08T174.png"></center>
 
-<br><br>
+    <br><br>
 
     <div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px;"><br><h3 style="margin-left: 10px; margin-top: 10px;">About Us</h3>
         <hr><p style="margin-left: 10px; margin-right: 10px; text-align: justify; margin-bottom: 10px;">
@@ -137,11 +136,36 @@ nav ul ul li {
     </div>
     <br><br><br><br>
 </div>
-
 <footer>
-    <p>Copyrigth &copy; ARSD College.<br>All rights reserved.</p>
-    <b><p>Created By Harsh (BSc CS Prog.)</p></b>
+    <div>
+        <u><h3>Follow us on:</h3></u>
+        <a href="https://m.facebook.com/ARSDCOLLEGE.DU/" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="24">
+        </a>
+        <a href="https://x.com/arsdcollegedu?lang=en" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" width="24">
+        </a>
+        <a href="https://www.instagram.com/_arsdcollege_/?hl=en" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="24">
+        </a>
+        <a href="https://www.linkedin.com/school/atma-ram-sanatan-dharma-college/" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24">
+        </a><br><br>
+        <p style="margin-top: 10px;">Copyright &copy; 2024 by ARSD College. All rights reserved.</p>
+        <p>Created by Harsh (BSc CS Prog.)</p>
+    </div>
 </footer>
+
+<script>
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.classList.contains("show-menu")) {
+            navbar.classList.remove("show-menu");
+        } else {
+            navbar.classList.add("show-menu");
+        }
+    }
+</script>
 
 </body>
 </html>
