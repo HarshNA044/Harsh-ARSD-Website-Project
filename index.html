@@ -40,6 +40,39 @@
             margin: 6px 0;
             transition: 0.4s;
         }
+        .container {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #a7c5eb 0%, #86a8e7 100%);
+  }
+  .spotlight-heading {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  .box {
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    line-height: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+  }
+  .box img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
         .logo {
             top: 0;
             margin-right: 10px; /* Adjust margin as needed */
@@ -172,43 +205,44 @@
     <br><br><br>
     <center><img width=100% src="https://static.theprint.in/wp-content/uploads/2023/06/Untitled-design-2023-06-08T174.png"></center>
     <br><br>
-    <u><div style="background-color: #F0FFFF; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-top-right-radius: 20px; border-bottom-left-radius: 20px; margin-left: 0%; padding: 10px;">
+    <u><div style="background: linear-gradient(135deg, #CCFFCC 0%, #FFFFCC 100%); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-top-right-radius: 20px; border-bottom-right-radius: 20px; margin-left: 0%; padding: 10px;">
         <h3 style="margin-left: 10px; margin-top: 10px;">About Us</h3></u>
         <p style="margin-left: 10px; margin-right: 10px; text-align: justify; margin-bottom: 10px;">
             Atma Ram Sanatan Dharma College is a premier educational institution of Delhi University which aims to nurture excellence in education. It emphasizes on fostering the quality of human resources and promoting productive ideas that benefit the students...<a href="About Us.html">Read more</a>
         </p></div>
-        <br>
-    <br><br>
-    <div style="background-color: #F0FFFF; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-top-right-radius: 20px; border-bottom-left-radius: 20px; margin-left: 0%; padding: 10px;">
+    <br>
+    <div style="background: linear-gradient(135deg, #FFCCCC 0%, #FFFFCC 100%); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-top-left-radius: 20px; border-bottom-left-radius: 20px; margin-left: 0%; padding: 10px;">
         <br>
         <u><h3 style="margin-left: 10px; margin-top: 10px;">Faculty</h3></u>
         <p style="margin-left: 10px; margin-right: 10px; text-align: justify; margin-bottom: 10px;">
             Our faculty members are experts in their respective fields, bringing a wealth of knowledge and experience to the classroom. We are proud to have a team of educators who are passionate about shaping the future leaders of tomorrow.
         </p>
-        <br>
     </div>
-    <br><br>
-    <div style="background-color: #F0FFFF; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-top-right-radius: 20px; border-bottom-left-radius: 20px; margin-left: 0%; padding: 10px;">
-        <u><h3>Alumni Spotlight</h3></u>
-        <ul>
-            <li>
-                <h3>Rajkumar Rao</h3>
-                <img width=30% src="https://www.thestatesman.com/wp-content/uploads/2017/10/20622081_1586582224726324_4625817859807715710_n.jpg" alt="Rajkumar_Rao">
-                <p>Indian Actor</p>
-            </li>
-            <li>
-                <h3>Jaspreet Jasz</h3>
-                <img width=27% src="https://tfipost.com/wp-content/uploads/2022/01/Jaspreet_Jasz_singing-e1644036353530-600x375.jpg" alt="Jaspreet_Jasz">
-                <p>Indian Singer</p>
-            </li>
-            <li>
-                <h3>Sudhir Chaudhary</h3>
-                <img width=22.5% src="https://img.etimg.com/thumb/width-640,height-480,imgsize-39652,res5200,resizemode-75,msid-92614127/news/new-updates/sudhir-chaudhary-quits-as-chief-executive-officer-of-zee-media-to-start-his-own-venture/1.jpg" alt="Sudhir_Chaudhary">
-                <p>Editor of Aaj Tak</p>
-            </li>
-        </ul>
-    </div>
-    <br><br><br><br>
+    <br>
+   <div class="container">
+  <h2 class="spotlight-heading">Alumni Spotlight</h2>
+  <div class="box">
+    <img align='left' src="https://www.thestatesman.com/wp-content/uploads/2017/10/20622081_1586582224726324_4625817859807715710_n.jpg" alt="Rajkumar Rao">
+    <h3>Rajkumar Rao</h3>
+    <p>Indian Actor</p>
+  </div>
+  <div class="box">
+    <img align='left' src="https://tfipost.com/wp-content/uploads/2022/01/Jaspreet_Jasz_singing-e1644036353530-600x375.jpg" alt="Jaspreet Jasz">
+    <h3>Jaspreet Jasz</h3>
+    <p>Indian Singer</p>
+  </div>
+  <div class="box">
+    <img align='left' src="https://img.etimg.com/thumb/width-640,height-480,imgsize-39652,res5200,resizemode-75,msid-92614127/news/new-updates/sudhir-chaudhary-quits-as-chief-executive-officer-of-zee-media-to-start-his-own-venture/1.jpg" alt="Sudhir Chaudhary">
+    <h3>Sudhir Chaudhary</h3>
+    <p>Editor of Aaj Tak</p>
+  </div>
+  <div class="box">
+    <img align='left' src="https://source.boomplaymusic.com/group10/M00/01/05/ba8372ddd3c5460f87b9afaa48137c40_464_464.webp" alt="Maithili Thakur">
+    <h3>Maithili Thakur</h3>
+    <p>Indian Singer</p>
+  </div>
+   </div>
+    <br>
 </div>
 
 <footer>
