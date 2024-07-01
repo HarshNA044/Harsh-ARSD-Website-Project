@@ -12,8 +12,8 @@
         }
         header {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-                flex-direction: row; /* Stack elements vertically on small screens */
-                align-items: flex-start;
+            flex-direction: row; /* Stack elements vertically on small screens */
+            align-items: flex-start;
             display: flex;
             align-items: center;
             background-color: #001f4d;
@@ -39,6 +39,7 @@
             transition: 0.4s;
         }
         .logo {
+            top: 0;
             margin-right: 10px; /* Adjust margin as needed */
             height: auto; /* Ensure the logo scales properly */
         }
@@ -48,22 +49,26 @@
         }
         .heading {
             margin: 0;
-            line-height: 1;
+            font-size: 75%;
+            line-height: 1.2;
+            margin-right: 20px;
             white-space: nowrap; /* Prevents text from wrapping */
             overflow: hidden; /* Hides overflowing text */
             text-overflow: ellipsis; /* Adds ellipsis for overflowing text */
         }
         nav {
-    display: none;
-    background-color: #001f4d;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    position: relative;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    margin-top: 5px; 
-}
+            display: none;
+            background-color: rgba(0, 31, 77, 0.95);
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position:fixed;
+            top: 0;
+            z-index: 1000;
+            width: 80%;
+            margin-top: 25%;
+            margin-left: 5%;
+            border-radius: 8px;
+        }
         nav a {
             color: #fff;
             text-decoration: none;
@@ -121,27 +126,18 @@
             .menu-icon div {
                 margin: 4px 0;
             }
-            
-            .heading {
-                font-size: 60%;
-                line-height: 1.2;
-                margin-right: 20px;
-                /* Adjust font size for better fit */
-            }
-            
         }
         
         .arrow-up {
-          border: solid white;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 2.5px;
-          transform: rotate(-135deg);
-          -webkit-transform: rotate(-135deg);
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 2.5px;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
         }
     </style>
 </head>
-
 <body>
 <header>
     <div class="menu-icon" onclick="toggleMenu()">
@@ -210,7 +206,7 @@
             </li>
             <li>
                 <h3>Sudhir Chaudhary</h3>
-                <img width=22.5% src="https://img.etimg.com/thumb/width-640,height-480,imgsize-39652,resizemode-75,msid-92614127/news/new-updates/sudhir-chaudhary-quits-as-chief-executive-officer-of-zee-media-to-start-his-own-venture/1.jpg" alt="Sudhir_Chaudhary">
+                <img width=22.5% src="https://img.etimg.com/thumb/width-640,height-480,imgsize-39652,res5200,resizemode-75,msid-92614127/news/new-updates/sudhir-chaudhary-quits-as-chief-executive-officer-of-zee-media-to-start-his-own-venture/1.jpg" alt="Sudhir_Chaudhary">
                 <p>Editor of Aaj Tak</p>
             </li>
         </ul>
@@ -241,6 +237,15 @@
 <button id="backToTopBtn"><span class="arrow-up"></span></button>
 
 <script>
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.classList.contains("show-menu")) {
+            navbar.classList.remove("show-menu");
+        } else {
+            navbar.classList.add("show-menu");
+        }
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
       var backToTopButton = document.getElementById("backToTopBtn");
 
