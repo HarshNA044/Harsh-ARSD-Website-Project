@@ -11,41 +11,59 @@
             font-family: times;
         }
         header {
-            background: #001f4d;
-            color: black;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                flex-direction: row; /* Stack elements vertically on small screens */
+                align-items: flex-start;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            background-color: #001f4d;
+            color: #fff;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            top: 0;
             z-index: 1000;
+            box-sizing: border-box;
         }
         .menu-icon {
             display: inline-block;
             cursor: pointer;
             padding: 10px;
+            margin-right: 10px;
         }
         .menu-icon div {
-            width:20px;
+            width: 20px;
             height: 2px;
             background-color: #fff;
             margin: 6px 0;
             transition: 0.4s;
         }
-        nav {
-            display: none;
-            background-color: #001f4d;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            position: absolute;
-            top: 50px;
-            z-index: 1000;
-            width: 100%;
-            position: fixed;
+        .logo {
+            margin-right: 10px; /* Adjust margin as needed */
+            height: auto; /* Ensure the logo scales properly */
         }
+        .heading-container {
+            flex-grow: 1;
+            text-align: center; /* Center text horizontally */
+        }
+        .heading {
+            margin: 0;
+            line-height: 1;
+            white-space: nowrap; /* Prevents text from wrapping */
+            overflow: hidden; /* Hides overflowing text */
+            text-overflow: ellipsis; /* Adds ellipsis for overflowing text */
+        }
+        nav {
+    display: none;
+    background-color: #001f4d;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    margin-top: 5px; 
+}
         nav a {
             color: #fff;
             text-decoration: none;
@@ -75,23 +93,53 @@
             width: 100%;
         }
         #backToTopBtn {
-            display: none;
             position: fixed;
-            bottom: 20px;
-            right: 30px;
+            bottom: 30px;
+            right: 20px;
             z-index: 99;
-            border: none;
-            outline: none;
-            background-color: #00008B;
+            border: 0;
+            background-color: rgba(0, 31, 77, 0.8);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             color: white;
             cursor: pointer;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 18px;
+            padding: 15px 15px;
+            border-radius: 8px;
         }
         
         #backToTopBtn:hover {
             background-color: #555;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 600px) {
+            .heading-container {
+                text-align: right; /* Align text to the left on smaller screens */
+            }
+            .menu-icon {
+                padding: 5px;
+            }
+            .menu-icon div {
+                margin: 4px 0;
+            }
+            
+            .heading {
+                font-size: 60%;
+                line-height: 1.2;
+                margin-right: 20px;
+                /* Adjust font size for better fit */
+            }
+            .logo {
+                margin-bottom: 10px;
+            }
+        }
+        
+        .arrow-up {
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 2.5px;
+          transform: rotate(-135deg);
+          -webkit-transform: rotate(-135deg);
         }
     </style>
 </head>
@@ -103,7 +151,12 @@
         <div></div>
         <div></div>
     </div>
-    <img width='250' align='top' src='ARSD College Logo.png'>
+    <img class="logo" width=60 src="https://www.arsdcollege.ac.in/faculty/pictures/1yo4ebo0jptyu13bfy10fqyuarsdlogo.png">
+    <div class="heading-container">
+        <h5 class="heading">आत्मा राम सनातन धर्म महाविद्यालय</h5>
+        <h5 class="heading">Atma Ram Sanatan Dharma College</h5>
+        <h5 class="heading">University of Delhi</h5>
+    </div>
 </header>
 
 <nav id="navbar">
@@ -112,31 +165,40 @@
         <li><a href="About Us.html">About Us</a></li>
         <li><a href="student registration form.html">Student Registration</a></li>
         <li><a href="Contact Us.html">Contact Us</a></li>
-    
-</nav><br><br><br><br><br>
+    </ul>
+</nav>
+
+<br><br>
 <div style="padding: 2.5%;">
-    <marquee style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 8px; border: 2px solid #4169e1;">Atma Ram Sanatan Dharma College is a prestigious institution committed to providing quality
-        education and fostering holistic development. Our college offers a diverse range of courses and activities to
-        nurture the intellectual and personal growth of our students.
-    </marquee><br><br><br>
+    <marquee style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 8px; border: 2px solid #301f4d;">
+        Atma Ram Sanatan Dharma College is a prestigious institution committed to providing quality education and fostering holistic development. Our college offers a diverse range of courses and activities to nurture the intellectual and personal growth of our students.
+    </marquee>
+    <br><br><br>
     <center><img width=100% src="https://static.theprint.in/wp-content/uploads/2023/06/Untitled-design-2023-06-08T174.png"></center>
-
     <br><br>
-
-    <div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px;"><br><h3 style="margin-left: 10px; margin-top: 10px;">About Us</h3>
-        <hr><p style="margin-left: 10px; margin-right: 10px; text-align: justify; margin-bottom: 10px;">
-            Atma Ram Sanatan Dharma College is a premier educational institution of Delhi University which aims to nurture excellence
-            in education. It emphasizes on fostering the quality of human resources and promoting productive ideas that benefit the students...<a href="About Us.html">Read more</a>
-        </p><br></div><br><br>
-
-    <div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px;"><br><h3 style="margin-left: 10px; margin-top: 10px;">Faculty</h3><hr>
+    <div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px;">
+        <br>
+        <h3 style="margin-left: 10px; margin-top: 10px;">About Us</h3>
+        <hr>
         <p style="margin-left: 10px; margin-right: 10px; text-align: justify; margin-bottom: 10px;">
-            Our faculty members are experts in their respective fields, bringing a wealth of knowledge and
-            experience to the classroom. We are proud to have a team of educators who are passionate about
-            shaping the future leaders of tomorrow.
-        </p><br></div><br><br>
-
-    <div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 10px;"><h3>Alumni Spotlight</h3><hr>
+            Atma Ram Sanatan Dharma College is a premier educational institution of Delhi University which aims to nurture excellence in education. It emphasizes on fostering the quality of human resources and promoting productive ideas that benefit the students...<a href="About Us.html">Read more</a>
+        </p>
+        <br>
+    </div>
+    <br><br>
+    <div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px;">
+        <br>
+        <h3 style="margin-left: 10px; margin-top: 10px;">Faculty</h3>
+        <hr>
+        <p style="margin-left: 10px; margin-right: 10px; text-align: justify; margin-bottom: 10px;">
+            Our faculty members are experts in their respective fields, bringing a wealth of knowledge and experience to the classroom. We are proud to have a team of educators who are passionate about shaping the future leaders of tomorrow.
+        </p>
+        <br>
+    </div>
+    <br><br>
+    <div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); border-radius: 8px; padding: 10px;">
+        <h3>Alumni Spotlight</h3>
+        <hr>
         <ul>
             <li>
                 <h3>Rajkumar Rao</h3>
@@ -157,7 +219,7 @@
     </div>
     <br><br><br><br>
 </div>
-    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Top</button>
+
 <footer>
     <div>
         <u><h3>Follow us on:</h3></u>
@@ -172,38 +234,35 @@
         </a>
         <a href="https://www.linkedin.com/school/atma-ram-sanatan-dharma-college/" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24">
-        </a><br><br>
+        </a>
+        <br><br>
         <p style="margin-top: 10px;">Copyright &copy; 2024 by ARSD College. All rights reserved.</p>
         <p>Created by Harsh (BSc CS Prog.)</p>
     </div>
 </footer>
+<button id="backToTopBtn"><span class="arrow-up"></span></button>
+
 <script>
-var mybutton = document.getElementById("backToTopBtn");
+    document.addEventListener("DOMContentLoaded", function() {
+      var backToTopButton = document.getElementById("backToTopBtn");
 
-window.onscroll = function() {scrollFunction()};
+      window.onscroll = function() {
+        scrollFunction();
+      };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-</script>
-<script>
-    function toggleMenu() {
-        var navbar = document.getElementById("navbar");
-        if (navbar.classList.contains("show-menu")) {
-            navbar.classList.remove("show-menu");
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          backToTopButton.style.display = "block";
         } else {
-            navbar.classList.add("show-menu");
+          backToTopButton.style.display = "none";
         }
-    }
+      }
+
+      backToTopButton.addEventListener("click", function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    });
 </script>
 
 </body>
