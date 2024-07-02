@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: times;
+            background-color: #f4f4f4;
         }
         header {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -163,16 +164,18 @@
             }
         }
     
-label {
-      display: block;
-      margin: 10px;
+    label {
+      display: inline-block;
       color: #333;
+      margin-left: 0;
     }
     form {
       background-color: #fff;
-      padding: 20px;
+      padding: 3%;
       width: 100%;
-      text-align: left;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      
     }
         .arrow-up {
             border: solid white;
@@ -209,17 +212,16 @@ label {
     </ul>
 </nav>
 
-<br><br><br><br><br>
+<br><br><br><br>
 <div style="padding: 2.5%;">
- <br><center>
+ <br>
 <form>
-  <img width="80" align="left" src="https://seeklogo.com/images/A/arsd-college-logo-35C65FCD3D-seeklogo.com.png">
-  <h3>ARSD College<br>Student Registration Form</h3><br>
+ <u><center><h3 style="background-color:#001f47; border-radius: 8px; padding: 3%; color:#fff;">ARSD College<br>Student Registration Form</h3></center></u>
 <hr>
     <label for="firstName">First Name:</label>
-    <input style="display: flex;" type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required><br><br>
     <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required><br><br>
     <div>
       <label for="gender">Gender:</label>
       <input type="radio" id="male" name="gender" value="male" required>
@@ -227,13 +229,13 @@ label {
 
       <input type="radio" id="female" name="gender" value="female" required>
       <label for="female">Female</label>
-    </div>
+    </div><br>
     <label for="course">Course:</label>
     <select id="course" name="course" required>
       <option value="commerce">Commerce</option>
       <option value="science">Science</option>
       <option value="arts">Arts</option>
-    </select>
+    </select><br><br>
     <div>
       <label for="interests">Interests:</label>
       <input type="checkbox" id="reading" name="interests" value="reading">
@@ -246,7 +248,7 @@ label {
   </b><br>
   <button style="border-radius: 4px; background-color: #001f47; color: white; border:0px; padding: 10px;" type="submit">Submit</button>
   <button style="border-radius: 4px; background-color: #001f47; color: white; border: 0px; padding: 10px;" type="reset">Reset</button>
-  </form></center><br><br><br><br>
+  </form><br><br><br><br>
     
 </div>
 <footer><br>
@@ -309,5 +311,4 @@ label {
 </script>
 
 </body>
-      </html>
-    
+</html>
