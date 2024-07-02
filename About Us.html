@@ -3,104 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atma Ram Sanatan Dharma College</title>
+    <title>Home - Atma Ram Sanatan Dharma College</title>
     <style>
-      body {
-    margin: 0;
-    padding: 0;
-    text-align: justify;
-}
-
-header {
-    background-color: #0047ab;
-    color: white;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: times;
+        }
+        header {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            flex-direction: row; /* Stack elements vertically on small screens */
+            align-items: flex-start;
+            display: flex;
+            align-items: center;
+            background-color: #001f4d;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+            margin-top: 0;
+            
+        }
+        .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .menu-icon div {
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .container {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 2%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #a7c5eb 0%, #86a8e7 100%);
+  }
+  .spotlight-heading {
     text-align: center;
-    padding: 10px;
-}
-
-nav {
-    background-color: #001f4d;
-    padding: 10px;
-}
-
-footer {
-    background-color: #001f4d;
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  .box {
+    width: 95%;
+    padding: 2%;
     text-align: center;
-    padding: 1em;
-}
+    line-height: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+  }
+  .box img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+        .logo {
+            top: 0;
+            margin-right: 10px; /* Adjust margin as needed */
+            height: auto; /* Ensure the logo scales properly */
+        }
+        .heading-container {
+            flex-grow: 1;
+            text-align: center; /* Center text horizontally */
+        }
+        .heading {
+            margin: 0;
+            font-size: 75%;
+            line-height: 1.2;
+            margin-right: 20px;
+            white-space: nowrap; /* Prevents text from wrapping */
+            overflow: hidden; /* Hides overflowing text */
+            text-overflow: ellipsis; /* Adds ellipsis for overflowing text */
+        }
+        nav {
+            display: none;
+            background-color: rgba(0, 31, 77, 0.95);
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position:fixed;
+            top: 0;
+            z-index: 1000;
+            width: 80%;
+            margin-top: 25%;
+            margin-left: 5%;
+            border-radius: 8px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #00274D;
+        }
+        nav a:hover {
+            background-color: #00274D;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .show-menu {
+            display: block;
+        }
+        footer {
+            background: #001f4d;
+            color: #fff;
+            text-align: center;
+            padding: 1%;
+            font-size: 80%;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 99;
+            border: 0;
+            background-color: rgba(0, 31, 77, 0.6);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            color: white;
+            cursor: pointer;
+            padding: 15px 15px;
+            border-radius: 8px;
+        }
+        
+        #backToTopBtn:hover {
+            background-color: #555;
+        }
 
-nav a {
-    color: #fff;
-    margin: 10px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    font-size: 50%;
-}
-
-nav li {
-    position: relative;
-}
-
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #00274D;
-    border: 1px solid #001F4D;
-}
-
-nav li:hover > ul {
-    display: inherit;
-}
-
-nav ul ul li {
-    width: 100%;
-    float: none;
-}
+        /* Media Query for Mobile Devices */
+        @media (max-width: 600px) {
+            .heading-container {
+                text-align: right; /* Align text to the left on smaller screens */
+            }
+            .menu-icon {
+                padding: 5px;
+            }
+            .menu-icon div {
+                margin: 4px 0;
+            }
+        }
+        
+        .arrow-up {
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 2.5px;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
     </style>
 </head>
-
 <body>
 <header>
-    <img width='100' align='top' src='https://www.rojgarhub.com/wp-content/uploads/2022/04/ARSD-College-Recruitment.jpg'>
-    <h4>Atma Ram Sanatan Dharma College</h4>
-    <h5>Dhaula Kuan, New Delhi-110021</h5>
-    <h6>University of Delhi</h6>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <img class="logo" width=60 src="https://www.arsdcollege.ac.in/faculty/pictures/1yo4ebo0jptyu13bfy10fqyuarsdlogo.png">
+    <div class="heading-container">
+        <h5 class="heading">आत्मा राम सनातन धर्म महाविद्यालय</h5>
+        <h5 class="heading">Atma Ram Sanatan Dharma College</h5>
+        <h5 class="heading">University of Delhi</h5>
+    </div>
 </header>
 
-<nav>
+<nav id="navbar">
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li>
-            <a href="About Us.html">About Us</a>
-        </li>
-        <li>
-            <a href="#">Faculty</a>
-            <ul>
-                <li><a href="#">Computer</a><hr></li>
-                <li><a href="#">History</a></li>
-            </ul>
-        </li>
-        <li><a href="student registeration form.html">Student Registration</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="student registeration form.html
+">Student Registration</a></li>
         <li><a href="Contact Us.html">Contact Us</a></li>
     </ul>
-</nav><br>
+</nav>
+
+<br><br><br><br><br>
 <div style="padding: 2.5%;">
-<u><h1 style="text-align: center;">About Us</h1></u>
+<u><h2>About Us</h2></u>
 <center><img width=100% src="https://static.theprint.in/wp-content/uploads/2023/06/Untitled-design-2023-06-08T174.png"></center>
-<p>Atma Ram Sanatan Dharma College is a premier educational institution of Delhi University 
+<p style="text-align: justify;">Atma Ram Sanatan Dharma College is a premier educational institution of Delhi University 
     which aims to nurture excellence in education. It emphasizes on fostering the quality of human 
     resources and promoting productive ideas that benefit the students. Since its inception, the College 
     as focused on character building and idealism inspired by Sanatani values. The College embraces 
@@ -119,10 +221,67 @@ The College is concerned primarily with creating an institution in tune with con
     
 </div>
 
-<footer>
-    <p>&copy; 2023 Atma Ram Sanatan Dharma College. All rights reserved.</p>
-    <b><p>Created By Harsh 23/35017</p></b><p>BSc. Phy. Sci. With Computer Science</p>
-</footer>
 
+<footer><br>
+    <img width=80 src="du100logo.png" alt='100 years of DU'>
+    <div>
+        <u><h3>Follow us on:</h3></u>
+        <a href="https://m.facebook.com/ARSDCOLLEGE.DU/" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="24">
+        </a>
+        <a href="https://x.com/arsdcollegedu?lang=en" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" width="24">
+        </a>
+        <a href="https://www.instagram.com/_arsdcollege_/?hl=en" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="24">
+        </a>
+        <a href="https://www.linkedin.com/school/atma-ram-sanatan-dharma-college/" target="_blank" style="margin: 0 10px; color: #fff; text-decoration: none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="24">
+        </a>
+        <br><br><br>
+        <a href="https://harshna044.github.io/Harsh-ARSD-Website-Project/index.html" style="margin: 0 1%; text-decoration: none; color:#fff;">Home</a><span>|</span>
+        <a href="https://harshna044.github.io/Harsh-ARSD-Website-Project/About%20Us.html" style="margin: 0 1%; text-decoration: none; color:#fff;">About Us</a><span>|</span>
+        <a href="https://harshna044.github.io/Harsh-ARSD-Website-Project/student%20registeration%20form.html" style="margin: 0 1%; text-decoration: none; color:#fff;">Student Registration</a><span>|</span>
+        <a href="https://harshna044.github.io/Harsh-ARSD-Website-Project/Contact%20Us.html" style="margin: 0 1%; text-decoration: none; color:#fff;">Contact Us</a>
+        <p style="margin-top: 10px;">Copyright &copy; 2024 by ARSD College. All rights reserved.</p>
+        <p>Created by Harsh (BSc CS Prog.)</p>
+    </div>
+</footer>
+<button id="backToTopBtn"><span class="arrow-up"></span></button>
+
+<script>
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.classList.contains("show-menu")) {
+            navbar.classList.remove("show-menu");
+        } else {
+            navbar.classList.add("show-menu");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var backToTopButton = document.getElementById("backToTopBtn");
+
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      }
+
+      backToTopButton.addEventListener("click", function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    });
+</script>
+
+</body>
+</html>
 </body>
 </html>
