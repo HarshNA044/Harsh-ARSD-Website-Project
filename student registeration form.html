@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#004080"> <!-- Sets the color for Chrome -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration - Atma Ram Sanatan Dharma College</title>
     <style>
@@ -9,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: times;
-            background-color: #f4f4f4;
+            background-color: white;
         }
         header {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -94,10 +95,11 @@
         }
         nav {
             display: none;
-            background-color: rgba(0, 31, 77, 0.95);
+            background-color: rgba(0, 31, 77, 0.8);
             padding: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             position:fixed;
+            backdrop-filter: blur(4px);
             top: 0;
             z-index: 1000;
             width: 80%;
@@ -163,8 +165,8 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             color: white;
             cursor: pointer;
-            padding: 15px 15px;
-            border-radius: 8px;
+            padding: 15px 18px;
+            border-radius: 50%;
         }
         
         #backToTopBtn:hover {
